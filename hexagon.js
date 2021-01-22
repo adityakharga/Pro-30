@@ -13,7 +13,6 @@ class Hexagon{
 
     World.add(world,this.body)
   }
-    }
     display(){
     if(this.body.speed < 3){
      
