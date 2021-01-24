@@ -120,7 +120,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyCode === 32 ){
+    if(keyCode===32 ){
        hex.trajectory =[];
        Matter.Body.setPosition(hex.body, {x: 100 , y: 100});
        sling = new SlingShot(hex.body,{x:100,y:400})
