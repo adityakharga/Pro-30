@@ -23,11 +23,8 @@ function setup() {
     hex = new Hexagon(100,400,30,30)
 
     //FRAMES
-    /*Frame1 = new Ground(400,700,800,20)
-    Frame2 = new Ground(800,350,20,800)
-    Frame3 = new Ground(400,0,800,20)
-    Frame4 = new Ground(0,350,20,800)*/
-
+    Frame1 = new Ground(750,600,1500,20)
+    
     //BASES
     G1 = new Ground(1000,300,350,10)
     G2 = new Ground(600,500,350,10)
@@ -75,10 +72,7 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background("cyan");
-  /*Frame1.display();
-  Frame2.display();
-  Frame3.display();
-  Frame4.display();*/
+  Frame1.display();
   G1.display();
   G2.display();
   hex.display();
@@ -120,7 +114,7 @@ function mouseReleased(){
 }
 
 function keyPressed(){
-    if(keyCode===32 ){
+    if(keyCode === 32 && hex.body.speed<2){
        hex.trajectory =[];
        Matter.Body.setPosition(hex.body, {x: 100 , y: 100});
        sling = new SlingShot(hex.body,{x:100,y:400})
